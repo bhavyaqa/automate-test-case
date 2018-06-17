@@ -1,0 +1,18 @@
+//is sign in option working?
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class TestCase2 {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\pc1\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.bing.com/translator");
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("id_l"))).click();
+
+	}
+
+}
